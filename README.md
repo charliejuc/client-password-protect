@@ -1,4 +1,4 @@
-# Client Password Hash
+# Client Password Protect
 
 ### clientPassProtect(password, [options:{ rounds: [default:250000] }])
 
