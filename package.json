@@ -1,12 +1,18 @@
 {
   "name": "client-pass-protect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest ./tests"
   },
-  "keywords": [],
+  "keywords": [
+    "password hasher",
+    "password protect",
+    "client password protect",
+    "password hash",
+    "sha256"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
