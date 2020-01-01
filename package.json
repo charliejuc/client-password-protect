@@ -1,0 +1,19 @@
+{
+  "name": "client-pass-protect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ./tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "defaults": "^1.0.3",
+    "sha.js": "^2.4.11"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
