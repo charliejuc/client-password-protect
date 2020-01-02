@@ -2,6 +2,12 @@
 
 ### clientPassProtect(password, [options:{ rounds: [default:250000] }])
 
+```bash
+npm i client-pass-protect
+//OR
+yarn add client-pass-protect
+```
+
 ```js
 const clientPassProtect = require('client-pass-protect')
 
