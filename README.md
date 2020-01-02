@@ -4,7 +4,7 @@
 
 ```bash
 npm i client-pass-protect
-//OR
+#OR
 yarn add client-pass-protect
 ```
 
