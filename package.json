@@ -1,6 +1,6 @@
 {
   "name": "client-pass-protect",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,6 @@
     "sha.js": "^2.4.11"
   },
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^26.6.3"
   }
 }
