@@ -1,6 +1,6 @@
 # Client Password Protect
 
-### clientPassProtect(password, [options:{ rounds: [default:250000] }])
+### clientPassProtect(password, [options:{ rounds: [default:20000] }])
 
 ```bash
 npm i client-pass-protect
