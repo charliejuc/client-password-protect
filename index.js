@@ -15,18 +15,21 @@ function clientPasswordHash(password, options) {
     }
 
     options = defaults(options, {
-        rounds: 250000
+        rounds: 20000
     })
-    let { rounds } = options
+    const { rounds } = options
 
     if ( ! rounds || rounds <= 0 ) {
         throw new Error(`Rounds should be a positive integer. "${rounds}" passed`)
     }
 
-    let _hash = sha256(`${rounds}${password}`)
+    let currentRound = 0
+    let prevHash = ''
+    let _hash = ''
 
-    while ( --rounds ) {
-        _hash = sha256(`${rounds}${password}${_hash}`)
+    while (currentRound < rounds) {
+        prevHash = _hash = sha256(`${currentRound}${prevHash}${password}`)
+        ++currentRound
     }
 
     return _hash

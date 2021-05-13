@@ -1,5 +1,7 @@
 const clientPasswordProtect = require('../')
 
+const randomInt = (max) => Math.floor(Math.random() * max)
+
 test('clientPasswordProtect should be a function', () => {
     expect(clientPasswordProtect)
         .toBeInstanceOf(Function)
@@ -14,9 +16,13 @@ test('Hash match snapshot', () => {
 })
 
 test('Hash mismatch when change rounds', () => {
-    expect(clientPasswordProtect('Hello'))
+    expect(clientPasswordProtect('Hello', { rounds: 20000 }))
         .not
-        .toBe(clientPasswordProtect('Hello', { rounds: 100 }))
+        .toBe(clientPasswordProtect('Hello', { rounds: randomInt(19999) + 1 }))
+
+    expect(clientPasswordProtect('Hello', { rounds: 20000 }))
+        .not
+        .toBe(clientPasswordProtect('Hello', { rounds: 20001 + randomInt(20000) }))
 })
 
 test('Called with no params', () => {
